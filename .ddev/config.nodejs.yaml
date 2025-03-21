@@ -1,0 +1,10 @@
+web_extra_exposed_ports:
+- name: node-example
+  container_port: 9999
+  http_port: 80
+  https_port: 443
+
+web_extra_daemons:
+- name: "node-example"
+  command: "PORT=9999 npm run dev"
+  directory: /var/www/html
